@@ -20,6 +20,11 @@
 
     <div id="primaryContainer" class="primaryContainer clearfix">
         <div id="contenedor" class="clearfix">
+            <div id="headtext" class="clearfix">
+           <strong> <p style="color:#ffffff; text-align:center; margin-top:15px;margin-bottom:10px;">
+                Da click en Mi ubicación para calcular la distancia del lugar que te encuentras a las vatallas.
+            </p></strong>
+        </div>
 
             <div id="map" class="clearfix">
             </div>
@@ -27,11 +32,12 @@
             <div id="box1" class="clearfix">
                 <strong><input id="ubicacion" type="button" style="color:#FF0000; margin-top: 10px;
         float: right;" value="Mi ubicación"></input></strong>
-        <div id="box6" class="clearfix">
-                <strong><input id="regresar" type="button" style="color:#FF0000; margin-top: 10px;
-        float: lefth;" value="Regresar"></input></strong>
+            <div id="box6" class="clearfix">
+                <strong><div id="km" style="color:#FF0000; margin-top: 10px; float: lefth; "></div></strong>
             </div>
             </div>
+
+
             <div id="box2" class="clearfix">
              <strong><input id="input" type="button" style="color:#FF0000;" value="Beugny 9 Nov.1916"></input></strong>
             </div>
@@ -46,9 +52,6 @@
             </div>
         </div>
         <div id="footerbox" class="clearfix">
-           <strong> <p style="color:#ffffff; text-align:center; margin-top:15px;">
-                Da click en Mi ubicación para calcular la distancia de tu ubicacion a las vatallas, recuerda seleccionar tu ubicacion para ver cada una.
-            </p></strong>
         </div>
     </div>
 
@@ -63,21 +66,21 @@
                 $('#input').click(function(){
                     map .setView([50.112, 2.928], 13);
                     var distancia = geolocalizacion.distanceTo([49.432, 5.757]);
-                        alert(Math.round(distancia/1000) + 'Kms');
+                        $("#kilometros").html(Math.round(distancia/1000) + 'Kms');
                     
                 });
 
                 $('#input1').click(function(){
                     map .setView([50.864, 2.981], 12);
                     var distancia = geolocalizacion.distanceTo([49.432, 5.757]);
-                        alert(Math.round(distancia/1000) + 'Kms');
+                        $("#kilometros").html(Math.round(distancia/1000) + 'Kms');
 
                 });
 
                 $('#input2').click(function(){
                     map .setView([50.0081685,2.8740525], 13);
                     var distancia = geolocalizacion.distanceTo([49.432, 5.757]);
-                        alert(Math.round(distancia/1000) + 'Kms');
+                        $("#kilometros").html(Math.round(distancia/1000) + 'Kms');
 
                  
                 });
@@ -86,7 +89,7 @@
                 $('#input3').click(function(){
                     map .setView([49.92, 2.76], 13);
                     var distancia = geolocalizacion.distanceTo([49.432, 5.757]);
-                        alert(Math.round(distancia/1000) + 'Kms');
+                        $("#kilometros").html(Math.round(distancia/1000) + 'Kms');
                     
                 });
 
