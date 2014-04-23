@@ -65,21 +65,21 @@
 
                 $('#input').click(function(){
                     map .setView([50.112, 2.928], 13);
-                    var distancia = geolocalizacion.distanceTo([49.432, 5.757]);
+                    var distancia = geolocalizacion.distanceTo([50.112, 2.928], 13);
                         $("#km").html(Math.round(distancia/1000) + 'Kms');
                     
                 });
 
                 $('#input1').click(function(){
                     map .setView([50.864, 2.981], 12);
-                    var distancia = geolocalizacion.distanceTo([49.432, 5.757]);
+                    var distancia = geolocalizacion.distanceTo([50.864, 2.981], 12);
                         $("#km").html(Math.round(distancia/1000) + 'Kms');
 
                 });
 
                 $('#input2').click(function(){
                     map .setView([50.0081685,2.8740525], 13);
-                    var distancia = geolocalizacion.distanceTo([49.432, 5.757]);
+                    var distancia = geolocalizacion.distanceTo([50.0081685,2.8740525], 13);
                         $("#km").html(Math.round(distancia/1000) + 'Kms');
 
                  
@@ -88,7 +88,7 @@
 
                 $('#input3').click(function(){
                     map .setView([49.92, 2.76], 13);
-                    var distancia = geolocalizacion.distanceTo([49.432, 5.757]);
+                    var distancia = geolocalizacion.distanceTo([49.92, 2.76], 13);
                         $("#km").html(Math.round(distancia/1000) + 'Kms');
                     
                 });
