@@ -33,7 +33,7 @@
                 <strong><input id="ubicacion" type="button" style="color:#FF0000; margin-top: 10px;
         float: right;" value="Mi ubicación"></input></strong>
             <div id="box6" class="clearfix">
-                <strong><div id="km" style="color:#FF0000; margin-top: 10px; float: lefth; "></div></strong>
+                <strong><div id="km" style="color: #FFFFFF; margin-top: 10px; float: lefth;font-size: 12px;"></div></strong>
             </div>
             </div>
 
@@ -66,7 +66,7 @@
                 $('#input').click(function(){
                     map .setView([50.112, 2.928], 13);
                     var distancia = geolocalizacion.distanceTo([49.432, 5.757]);
-                        $("#kilometros").html(Math.round(distancia/1000) + 'Kms');
+                        $("#km").html(Math.round(distancia/1000) + 'Kms');
                     
                 });
 
