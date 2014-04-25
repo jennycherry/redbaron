@@ -6,12 +6,68 @@
 	<link rel="stylesheet" href="index.css" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
-	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     </head>
     <body>
              <div id="fb-root"></div>
-              
-<script>
+              <script>
+
+  window.fbAsyncInit = function() {
+        FB.init({
+          appId: '617649224977451', // App ID
+          status: true, // check login status
+          cookie: true, // enable cookies to allow the server to access the session
+          oauth: true, // enable OAuth 2.0
+          xfbml: true // parse XFBML
+        });
+        
+        
+        
+    //Checar si la sesion esta activa    
+        
+        FB.getLoginStatus(function (response) {
+      if (response.status === 'connected') {
+          //Si el usuario esta logueado correctamente
+          //OBTENER NOMBRE
+          FB.api('/me', function (response) {
+              $('#hola').html('Hola ' + response.name);
+          });
+          //OBTENER IMAGEN DE PERFIL
+          FB.api("/me/picture?width=180&height=180", function (response) {
+              $('#picture').attr({ 'src' : response.data.url  })
+          });
+
+      } else if (response.status === 'not_authorized') {
+          //Usuario no logueado en aplicacion
+          window.location = "index.html";
+      } else {
+          //Usuario no logueado en aplicacion ni en facebook
+          window.location = "index.html";
+      }
+    });
+        
+        
+      };
+
+  
+   
+   
+   
+   
+
+   (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+  
+  
+  
+
+  </script>
+<!--script>
   window.fbAsyncInit = function() {
   FB.init({
     appId      : '617649224977451',
@@ -68,7 +124,7 @@
       console.log('Good to see you, ' + response.name + '.');
     });
   }
-</script>
+</script-->
     <div id="primaryContainer" class="primaryContainer clearfix">
         <div id="contenedor" class="clearfix">
             <div id="avion" class="clearfix">
