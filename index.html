@@ -9,7 +9,15 @@
     </head>
     <body>
              <div id="fb-root"></div>
-<script>
+             <script src="flogin.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#face').facebook_login({
+        appId: '617649224977451'
+      });
+      });
+  </script>
+<!--script>
   window.fbAsyncInit = function() {
   FB.init({
     appId      : '617649224977451',
@@ -66,7 +74,7 @@
       console.log('Good to see you, ' + response.name + '.');
     });
   }
-</script>
+</script-->
     <div id="primaryContainer" class="primaryContainer clearfix">
         <div id="contenedor" class="clearfix">
             <div id="avion" class="clearfix">
