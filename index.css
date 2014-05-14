@@ -6,7 +6,7 @@
     min-height: 100%;
     width: 1029px;
     max-width: none;
-    background-image:url("img/backgroundEntrada.jpg");
+    background-image:url("img/backgroundEntrada.jpg") no-repeat;
     background-attachment: inherit;
     background-size: auto;
     float: none;
@@ -232,11 +232,11 @@
 
     .primaryContainer {
         width: 100%;
-        background-image:url("img/backgroundEntrada.jpg");
+        background-image:url("img/backgroundEntrada.jpg") no-repeat;
         background-attachment: inherit;
         background-size: auto;
         background-position: 0% 0%;
-        background-repeat: no-repeat repeat;
+        background-repeat: no-repeat ;
     }
 
     #avion {
@@ -396,7 +396,7 @@
     }
 
     .primaryContainer {
-        background-image:url("img/backgroundEntrada.jpg");
+        background-image:url("img/backgroundEntrada.jpg") no-repeat;
         background-attachment: scroll;
         background-size: auto;
         width: 100%;
@@ -454,7 +454,7 @@
         float: none;
         width: 100%;
         min-width: 0px;
-        background-image:url("img/backgroundEntrada.jpg");
+        background-image:url("img/backgroundEntrada.jpg")no-repeat;
         background-attachment: scroll;
         background-size: auto;
         clear: none;
@@ -526,7 +526,7 @@
     .primaryContainer {
         width: 100%;
         min-width: 0px;
-        background-image:url("img/backgroundEntrada.jpg");
+        background-image:url("img/backgroundEntrada.jpg") no-repeat;
         background-attachment: scroll;
         background-size: auto;
         background-position: 0% 0%;
