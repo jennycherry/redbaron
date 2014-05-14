@@ -96,13 +96,16 @@
                 });
 
                 $('#ubicacion').click(function(){
-                    if (navigator.geolocation) {
-                        navigator.geolocation.getCurrentPosition(mostrarPos);
-                    }
-                    else{
-                        alert('navegador antiguo');
-                    }
-                    
+                    $.get('http://freegeoip.net/json/', function(data) { 
+			  var position = {
+			    coords : {
+			      latitude : data.latitude,
+			      longitude : data.longitude
+			    }
+			  };
+			  mostrarPos(position);
+			});
+			                    
                     $('#regresar').click(function(){
                     map .setView([49.432, 5.757], 6);
                    
